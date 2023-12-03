@@ -7,20 +7,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
         .nav-link {
-            margin-right: 20px; /* adjust as needed */
+            margin-right: 20px;
             text-decoration: none;
-            color: white;
+            color: #333;
+            font-weight: bold;
+            transition: color 0.3s;
         }
 
         .navbar {
-            background: rgba(62, 177, 215, 0.4); /* light blue with 50% transparency */
+            background: rgba(62, 177, 215, 0.4);
             position: fixed;
             width: 100%;
             top: 0;
@@ -28,12 +30,14 @@
             justify-content: space-between;
             padding: 10px;
             font-size: 20px;
-            font-weight: bold;
             text-transform: uppercase;
             z-index: 1000;
-            
-            /* Make the navbar background transparent */
         }
+
+        .navbar a:hover {
+            color: #007bff;
+        }
+
         #home,
         #about,
         #services {
@@ -46,15 +50,11 @@
             position: relative;
         }
 
-        h1 {
+        h1,
+        h2,
+        h3 {
             text-align: center;
-            font-size: 3em;
-            margin-top: 20%;
-        }
-
-        h2 {
-            text-align: center;
-            font-size: 2em;
+            color: #333;
         }
 
         .arrow {
@@ -66,32 +66,33 @@
             background-image: url('img/about-bg.jpg');
             background-size: cover;
             position: relative;
-            
         }
-        #about .content{
-            color: black;
-        }
-        #services{
-            background-color: white;
 
+        #about .content {
+            color: #333;
         }
+
+        #services {
+            background-color: white;
+        }
+
         #portfolio {
             background-color: white;
             padding-top: 60px;
             text-align: center;
         }
-       
 
         #portfolio-buttons {
             margin-bottom: 20px;
         }
+
         .portfolio-button {
             display: inline-block;
             margin: 5px;
             padding: 10px 20px;
             font-size: 16px;
             cursor: pointer;
-            background-color: #333;
+            background-color: #007bff;
             color: white;
             border: none;
             border-radius: 5px;
@@ -99,7 +100,7 @@
         }
 
         .portfolio-button:hover {
-            background-color: #555;
+            background-color: #0056b3;
         }
 
         .portfolio-images {
@@ -107,18 +108,20 @@
             flex-wrap: wrap;
             justify-content: center;
         }
+
         .portfolio-image {
             margin: 10px;
             opacity: 0;
-            visibility: hidden; /* Initially hide images */
+            visibility: hidden;
             transition: opacity 0.5s;
             flex: 0 0 auto;
         }
 
         .portfolio-image.show {
             opacity: 1;
-            visibility: visible; /* Show images */
+            visibility: visible;
         }
+
         .dropbtn {
             font-size: 16px;
             border: none;
@@ -127,8 +130,7 @@
             background-color: inherit;
             cursor: pointer;
         }
-        
-        /* Style the dropdown content (hidden by default) */
+
         .dropdown-content {
             display: none;
             position: absolute;
@@ -137,21 +139,18 @@
             box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
             z-index: 1;
         }
-        
-        /* Style the dropdown links */
+
         .dropdown-content a {
-            color: black;
+            color: #333;
             padding: 12px 16px;
             text-decoration: none;
             display: block;
         }
-        
-        /* Change color on hover */
+
         .dropdown-content a:hover {
             background-color: #ddd;
         }
-        
-        /* Show the dropdown menu on hover */
+
         .dropdown:hover .dropdown-content {
             display: block;
         }
@@ -159,10 +158,10 @@
 </head>
 
 <body>
-    
+
     <div id="home">
         <div class="navbar">
-            <div>LOREM IPSUM</div>
+            <div style="color: #fff;">LOREM IPSUM</div>
             <div>
                 <a href="#home" class="nav-link">Home</a>
                 <a href="#about" class="nav-link">About Us</a>
@@ -182,14 +181,22 @@
 
         <div class="content">
             <h3>  Voluptatem dignissimos</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in repreh</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Duis aute irure dolor in repreh</p>
         </div>
     </div>
     <div id="services">
         <!-- Services content goes here -->
         <div class="content">
-            <h3><center>Services</center></h3>
-            <p><center>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in repreh.m ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in repreh</center></p>
+            <h3>
+                <center>Services</center>
+            </h3>
+            <p>
+                <center>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                    labore et dolore magna aliqua. Duis aute irure dolor in repreh.m ipsum dolor sit amet, consectetur
+                    adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure
+                    dolor in repreh</center>
+            </p>
         </div>
     </div>
     <div id="portfolio">
@@ -204,25 +211,36 @@
 
         <div class="portfolio-images">
             <!-- All Images -->
-            <div class="portfolio-image all show"><img src="img/portfolio/portfolio-1.jpg" alt="Image 1" height="200" width="200"></div>
-            <div class="portfolio-image all show"><img src="img/portfolio/portfolio-2.jpg" alt="Image 2" height="200" width="200"></div>
-            <div class="portfolio-image all show"><img src="img/portfolio/portfolio-3.jpg" alt="Image 3" height="200" width="200"></div>
+            <div class="portfolio-image all show"><img src="img/portfolio/portfolio-1.jpg" alt="Image 1" height="200"
+                    width="200"></div>
+            <div class="portfolio-image all show"><img src="img/portfolio/portfolio-2.jpg" alt="Image 2" height="200"
+                    width="200"></div>
+            <div class="portfolio-image all show"><img src="img/portfolio/portfolio-3.jpg" alt="Image 3" height="200"
+                    width="200"></div>
 
             <!-- App Images -->
-            <div class="portfolio-image app"><img src="img/portfolio/portfolio-4.jpg" alt="App Image 1" height="200" width="200"></div>
-            <div class="portfolio-image app"><img src="img/portfolio/portfolio-5.jpg" alt="App Image 2" height="200" width="200"></div>
-            <div class="portfolio-image app"><img src="img/portfolio/portfolio-6.jpg" alt="App Image 3"height="200" width="200"></div>
+            <div class="portfolio-image app"><img src="img/portfolio/portfolio-4.jpg" alt="App Image 1" height="200"
+                    width="200"></div>
+            <div class="portfolio-image app"><img src="img/portfolio/portfolio-5.jpg" alt="App Image 2" height="200"
+                    width="200"></div>
+            <div class="portfolio-image app"><img src="img/portfolio/portfolio-6.jpg" alt="App Image 3" height="200"
+                    width="200"></div>
 
             <!-- Card Images -->
-            <div class="portfolio-image card"><img src="img/portfolio/portfolio-7.jpg" alt="Card Image 1" height="200" width="200"></div>
-            <div class="portfolio-image card"><img src="img/portfolio/portfolio-8.jpg" alt="Card Image 2" height="200" width="200"></div>
-            <div class="portfolio-image card"><img src="img/portfolio/portfolio-9.jpg" alt="Card Image 3" height="200" width="200"></div>
+            <div class="portfolio-image card"><img src="img/portfolio/portfolio-7.jpg" alt="Card Image 1" height="200"
+                    width="200"></div>
+            <div class="portfolio-image card"><img src="img/portfolio/portfolio-8.jpg" alt="Card Image 2" height="200"
+                    width="200"></div>
+            <div class="portfolio-image card"><img src="img/portfolio/portfolio-9.jpg" alt="Card Image 3" height="200"
+                    width="200"></div>
 
             <!-- Web Images -->
-            <div class="portfolio-image web"><img src="img/portfolio/portfolio-details-1.jpg" alt="Web Image 1" height="200" width="200"></div>
-            <div class="portfolio-image web"><img src="img/portfolio/portfolio-details-2.jpg" alt="Web Image 2" height="200" width="200"></div>
-            <div class="portfolio-image web"><img src="img/portfolio/portfolio-details-3.jpg" alt="Web Image 3" height="200" width="200"></div>
-
+            <div class="portfolio-image web"><img src="img/portfolio/portfolio-details-1.jpg" alt="Web Image 1"
+                    height="200" width="200"></div>
+            <div class="portfolio-image web"><img src="img/portfolio/portfolio-details-2.jpg" alt="Web Image 2"
+                    height="200" width="200"></div>
+            <div class="portfolio-image web"><img src="img/portfolio/portfolio-details-3.jpg" alt="Web Image 3"
+                    height="200" width="200"></div>
         </div>
     </div>
 
