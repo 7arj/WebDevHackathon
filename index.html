@@ -13,19 +13,25 @@
             box-sizing: border-box;
         }
 
+        .nav-link {
+            margin-right: 20px; /* adjust as needed */
+            text-decoration: none;
+            color: white;
+        }
+
         .navbar {
-           
+            background: rgba(62, 177, 215, 0.4); /* light blue with 50% transparency */
             position: fixed;
             width: 100%;
             top: 0;
             display: flex;
-            justify-content: space-around;
+            justify-content: space-between;
             padding: 10px;
             font-size: 20px;
             font-weight: bold;
             text-transform: uppercase;
-            background: transparent;
             z-index: 1000;
+            
             /* Make the navbar background transparent */
         }
         #home,
@@ -74,7 +80,7 @@
             padding-top: 60px;
             text-align: center;
         }
-      
+       
 
         #portfolio-buttons {
             margin-bottom: 20px;
@@ -153,28 +159,19 @@
 </head>
 
 <body>
-    <div><a href="#menu" class="nav-link">Mega Menu</a>
-        <div class="dropdown">
-            <button class="dropbtn">Dropdown</button>
-            <div class="dropdown-content">
-                <a href="#">Option 1</a>
-                <a href="#">Option 2</a>
-                <a href="#">Option 3</a>
-                <!-- Add more options as needed -->
-            </div>
-        </div>
-    </div>
     
     <div id="home">
         <div class="navbar">
             <div>LOREM IPSUM</div>
-            <div><a href="#home" class="nav-link">Home</a></div>
-            <div><a href="#about" class="nav-link">About Us</a></div>
-            <div><a href="#services" class="nav-link">Services</a></div>
-            <div><a href="#portfolio" class="nav-link">Portfolio</a></div>
-            <div><a href="#team" class="nav-link">Team</a></div>
-            <div><a href="#menu" class="nav-link">Mega Menu</a></div>
-            <div><a href="#contact" class="nav-link">Contact</a></div>
+            <div>
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#about" class="nav-link">About Us</a>
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#portfolio" class="nav-link">Portfolio</a>
+                <a href="#team" class="nav-link">Team</a>
+                <a href="#menu" class="nav-link">Mega Menu</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
         </div>
         <h1>LOREM IPSUM</h1>
         <h2>LOREM IPSUM LOREM IPSUM</h2>
@@ -239,17 +236,6 @@
                     behavior: 'smooth'
                 });
             });
-        });
-        document.querySelector('.dropbtn').addEventListener('click', function () {
-            document.querySelector('.dropdown-content').classList.toggle('show');
-        });
-        
-        // Close the dropdown if the user clicks outside of it
-        window.addEventListener('click', function (event) {
-            const dropdown = document.querySelector('.dropdown-content');
-            if (event.target !== dropdown && !dropdown.contains(event.target)) {
-                dropdown.classList.remove('show');
-            }
         });
 
         function filterImages(category) {
