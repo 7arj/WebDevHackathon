@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
             margin: 0;
             padding: 0;
             box-sizing: border-box;
@@ -40,10 +40,12 @@
 
         #home,
         #about,
-        #services {
+        #services
+         {
             padding-top: 60px;
+            
         }
-
+        
         #home {
             background-image: url('img/cta-bg.jpg');
             background-size: cover;
@@ -154,6 +156,58 @@
         .dropdown:hover .dropdown-content {
             display: block;
         }
+        #contact {
+            background-color: #f8f8f8;
+            padding: 60px 20px;
+            text-align: center;
+        }
+        
+        #contact h3 {
+            color: #333;
+        }
+        
+        #contact iframe {
+            margin-top: 20px;
+            border: 1px solid #ddd;
+        }
+        
+        .contact-details {
+            margin-top: 20px;
+        }
+        
+        .contact-details p {
+            margin: 10px 0;
+        }
+        
+        .social-media-links {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .social-media-links li {
+            display: inline-block;
+            margin-right: 10px;
+        }
+        
+        .social-media-links a {
+            text-decoration: none;
+            color: #007bff;
+            font-weight: bold;
+        }
+        
+        .social-media-links a:hover {
+            text-decoration: underline;
+        }
+        .containerfoot {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+        }
     </style>
 </head>
 
@@ -172,8 +226,8 @@
                 <a href="#contact" class="nav-link">Contact</a>
             </div>
         </div>
-        <h1>LOREM IPSUM</h1>
-        <h2>LOREM IPSUM LOREM IPSUM</h2>
+        <h1 class="heading">LOREM IPSUM</h1>
+        <h2 class="heading">LOREM IPSUM LOREM IPSUM</h2>
         <div class="arrow">↓</div>
     </div>
     <div id="about">
@@ -243,6 +297,41 @@
                     height="200" width="200"></div>
         </div>
     </div>
+    <!-- Contact Page -->
+<div id="contact">
+    <h3>Contact Us</h3>
+
+    <div>
+        <!-- Google Map -->
+        <iframe
+            src="https://www.google.com/maps/place/Stanza+Living+Lisbon+House+%7C+Coliving+PG+in+Electronic+City+Phase+1/@12.8484671,77.6545912,17z/data=!3m1!4b1!4m6!3m5!1s0x3bae6d39bc683cd5:0x51af52144352b21b!8m2!3d12.8484619!4d77.6571661!16s%2Fg%2F11h1951wbx?entry=ttu"
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+
+    <div class="contact-details">
+        <!-- Address -->
+        <p><strong>Address:</strong> Your Company, Street, City, Country</p>
+
+        <!-- Email -->
+        <p><strong>Email:</strong> info@example.com</p>
+
+        <!-- Phone Number -->
+        <p><strong>Phone:</strong> +1 (555) 123-4567</p>
+
+        <!-- Social Media Links -->
+        <p><strong>Follow us:</strong></p>
+        <ul class="social-media-links">
+            <li><a href="https://facebook.com" target="_blank">Facebook</a></li>
+            <li><a href="https://twitter.com" target="_blank">Twitter</a></li>
+            <li><a href="https://instagram.com" target="_blank">Instagram</a></li>
+        </ul>
+    </div>
+</div>
+    <!-- Footer -->
+    <footer class="containerfoot">
+        <p>This website has been created and designed by Arjun Ojha. </p>
+        <p>  2021 HEAVY_DRIVERS© Pvt. Ltd. All rights reserved.</p>
+    </footer>
 
     <script>
         // Smooth scrolling for navbar links
@@ -286,3 +375,5 @@
 </body>
 
 </html>
+
+ 
